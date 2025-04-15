@@ -1,0 +1,1 @@
+This a repo containing all the small and stupid projects that i've created
