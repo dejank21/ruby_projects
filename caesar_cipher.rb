@@ -6,7 +6,7 @@ def caesar_cipher(string, shift)
   uppercase_letters = ('A'..'Z').to_a
   initial_string = string.split('')
  
-  # Here we compare each character in the inital string and either return the shifter character or leave it if it does not appear in lowercase or uppercase letters
+  # Here we compare each character in the inital string and either return the shifted character or leave it if it does not appear in lowercase or uppercase letters
   
   final_string = initial_string.map do |character|
     if lowercase_letters.include?(character)
