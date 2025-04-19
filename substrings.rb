@@ -8,7 +8,6 @@ def substrings(string, dictionary)
       result[word] += 1
     end
   end
-  
   result 
 end
 
