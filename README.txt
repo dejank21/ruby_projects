@@ -1,1 +1,1 @@
-This a repo containing all the small and stupid projects that i've created
+This a repo containing ruby projects that I have created while working through the Odin Project. Comments located in different projects are often left for notes but may also include explanations or insights that I have picked up along the way
