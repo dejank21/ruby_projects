@@ -10,7 +10,7 @@ def bubble_sort(array)
       end
     end
 
-    break unless any_swaps #Once we complete our iterations or if no swaps occur than this will break the loop
+    break unless any_swaps #Once we complete our iterations or if no swaps occur then this will break the loop
   end
   array
 end
