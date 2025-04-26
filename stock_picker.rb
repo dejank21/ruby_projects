@@ -16,7 +16,7 @@ def stock_picker(price_array) #This method returns the best day to buy and the b
       end
     end
   end
-  return best_days
+  best_days
 end
 
 puts stock_picker([6,11,24,4,2,69,22,10,45])
