@@ -1,0 +1,16 @@
+GEM
+    remote: https://rubygems.org/
+    specs:
+        colorize (1.1.0)
+
+PLATFORMS
+    ruby
+    x86_64-linux
+
+DEPENDENCIES
+ colorize (~> 1.1)
+
+BUNDLED WITH    
+    2.5.4
+
+#This file give the specifis of the gem file and well as the platform, depedencies and ruby version that the program was last able to properly run with.
