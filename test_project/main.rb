@@ -9,3 +9,9 @@ Airport.new.introduce
 Flight.new.introduce
 
 Hotel.new.introduce
+
+require 'colorize'
+# This is a simple example of how to use the colorize gem to add color to your output.
+puts 'Red goes faster'.colorize(:red)
+
+puts 'Green goes slower'.colorize(:green)

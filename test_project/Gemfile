@@ -1,9 +1,7 @@
-source "https://rubygems.org"
-gem "colorize", "~> 1.1"
+# frozen_string_literal: true
 
-# This tells the bundler where to find the gem and what gems are required. As well as the version of the gem.
-# The "~>" operator means that it will use the latest version of the gem that is compatible with the specified version.
-# In this case, it will use any version of the colorize gem that is greater than or equal to 1.1 and less than 2.0.
-# The reason why is the .1 version changes will not break the code but a 2.0 version will. 
-# In the example 1.2.3, 2 would be a minor version change and 3 would be a patch version change. 
-# We can perform minor version and patch version changes without breaking the code.
+source "https://rubygems.org"
+
+# gem "rails"
+
+gem "colorize", "~> 1.1"
