@@ -39,9 +39,13 @@ class Game
       player_number = i + 1
       puts display_name_prompt(player_number)
       name = gets.chomp
-
       puts display_symbol_prompt(name)
+      
       symbol = gets.chomp.upcase
+      until symbol == 'X' || symbol == 'O'
+        puts "Invalid symbol. Please choose X or O."
+        symbol = gets.chomp.upcase
+      end
 
       players << Player.new(name, symbol)
     end
@@ -52,7 +56,7 @@ class Game
     while @player1.symbol == @player2.symbol
       puts duplicate_symbol
       puts display_symbol_prompt(@player2.name)
-      @player2.symbol = @player2.valid_symbol(gets.chomp.upcase)
+      @player2.symbol = gets.chomp.upcase
     end
 
     @current_player = @player1
@@ -62,6 +66,8 @@ class Game
   def play_rounds
     until game_over?
       take_turn
+      break if game_over?
+      # Checks if game over before switiching players
       switch_player
     end
   end

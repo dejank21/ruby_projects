@@ -35,8 +35,10 @@ class Board
   end
 
   # Checks if the move is valid 
-  def valid_move?(position)
-    @cells[position] == position
+  def valid_move?(input)
+    position = input.to_i
+    return position if position.between?(1, 9) && @cells[position] == position
+    false
   end
 
   # Checks if the board is full
