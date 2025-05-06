@@ -17,6 +17,7 @@ class Board
     [1, 5, 9], [3, 5, 7]             # Diagonal
   ].freeze
 
+  # rubocop:disable Metrics/AbcSize
   def display_board
     puts "\n"
     puts " #{cells[1]} | #{cells[2]} | #{cells[3]} "
@@ -26,6 +27,7 @@ class Board
     puts " #{cells[7]} | #{cells[8]} | #{cells[9]} "
     puts "\n"
   end
+  # rubocop:enable Metrics/AbcSize
 
   # Updates the cell at the given position with the symbol if the move is valid
   def update_cell(position, symbol)
