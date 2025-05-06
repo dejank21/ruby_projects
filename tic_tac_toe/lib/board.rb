@@ -52,5 +52,3 @@ class Board
   end
 end
 
-board = Board.new
-board.display_board
