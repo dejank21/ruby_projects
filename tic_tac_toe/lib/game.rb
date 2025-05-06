@@ -7,8 +7,6 @@ require_relative 'player'
 # This file contains the game logic for Tic Tac Toe.
 class Game
   include Display
-  include Board
-  include Player
   attr_reader :board, :current_player
 
   def initialize
@@ -36,7 +34,7 @@ class Game
   # This method creates two players and assigns them symbols
   def create_players
     players = []
-    
+
     2.times do |i|
       player_number = i + 1
       puts display_name_prompt(player_number)
@@ -49,13 +47,15 @@ class Game
     end
 
     @player1, @player2 = players
-    @current_player = @player1
 
     # Ensure symbols are unique
-    if @player1.symbol == @player2.symbol
+    while @player1.symbol == @player2.symbol
       puts duplicate_symbol
       puts display_symbol_prompt(@player2.name)
+      @player2.symbol = @player2.valid_symbol(gets.chomp.upcase)
     end
+
+    @current_player = @player1
   end
 
   # This method alternates between players until the game is over
@@ -70,7 +70,7 @@ class Game
   def take_turn
     @board.display_board
     puts display_player_turn(@current_player.name)
-    position = valid_move?
+    position = @board.valid_move?(gets)
     @board.update_cell(position, @current_player.symbol)
   end
 
@@ -81,7 +81,7 @@ class Game
 
   # This method checks if the game is over
   def game_over?
-    winner? || @board.full?
+    @board.winner?(@current_player.symbol) || @board.full?
   end
 
   # This method displays the winner or a tie message

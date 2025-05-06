@@ -4,7 +4,7 @@
 module Display
   
   def display_intro
-    "Welcome to Tic Tac Toe!"
+    "\nWelcome to Tic Tac Toe!"
   end
 
   def display_name_prompt(player_number)

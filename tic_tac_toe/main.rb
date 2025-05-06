@@ -5,7 +5,7 @@ require_relative 'lib/display'
 
 def play_game
   game = Game.new
-  game.play_game
+  game.play
   repeate_game
 end
 
