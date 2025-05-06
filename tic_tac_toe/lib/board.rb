@@ -4,7 +4,6 @@
 # It is responsible for displaying the board, updating the cells, checking for valid moves, and win conditions.
 
 class Board
-  
   attr_reader :cells
 
   def initialize
@@ -16,7 +15,7 @@ class Board
     [1, 2, 3], [4, 5, 6], [7, 8, 9], # Horizontal
     [1, 4, 7], [2, 5, 8], [3, 6, 9], # Vertical
     [1, 5, 9], [3, 5, 7]             # Diagonal
-].freeze
+  ].freeze
 
   def display_board
     puts "\n"
@@ -38,7 +37,7 @@ class Board
     @cells[position] == position
   end
 
-  # Checks if the game is over (i.e., there is a winner or the board is full)
+  # Checks if the board is full
   def full?
     @cells[1..9].all? { |cell| cell.is_a?(String) }
   end
