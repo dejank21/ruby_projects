@@ -34,7 +34,7 @@ class Board
     @cells[position] = symbol if valid_move?(position)
   end
 
-  # Checks if the move is valid (i.e., the cell is not already taken)
+  # Checks if the move is valid 
   def valid_move?(position)
     @cells[position] == position
   end
